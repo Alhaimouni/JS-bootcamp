@@ -206,5 +206,32 @@ and more of them to know more search [ Character Escape Sequences ]
 <pre>
   String Methods
 
+  Note : mand from mandatory and opt from optional
+
+  let x = 'Hello people this is war'
+
+  - indexOf(value [mand] , start [Opt] default is 0)  //  x.indexOf('this') =>  13  (if no result it will give -1)
+  - lastIndexOf(value [mand] , start [Opt] default is length) // x.indexOf('o') =>  8 find the index of first o from the last 
+  - slice(start [mand] , end [opt] not included )
+      x.slice(2,10)  => 'llo peop'
+      x.slice(-7,-3) => ' is '   //slice in negative deal with length not index and from the end
+  - repeat(Times)
+  - split(seperator [opt],limit [opt])
+      x.split() => ['Hello people this is war'] ,
+      x.split('') => ['H', 'e', 'l', 'l', 'o', ' ', 'p', 'e', 'o', 'p', 'l', 'e', ' ', 't', 'h', 'i', 's', ' ', 'i', 's', ' ', 'w', 'a', 'r']
+      x.split(' ') => ["Hello" , "people" , "this" , "is" , "war"]
+      x.split(' ' ,2) => ["Hello" , "people"]
+</pre>
+---
+### LV-29
+---
+<pre>
+  String Methods
+
+  - subString()
+  - subStr()
+  - includes(value [mand], start [opt] default 0)
+  - startWith(value [mand], start [opt] default 0)
+  - endWith(value [mand], length [opt] default full length)
 </pre>
 ---
