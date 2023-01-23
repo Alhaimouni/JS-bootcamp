@@ -56,7 +56,7 @@ and more of them to know more search [ Character Escape Sequences ]
 <pre>
   Arithmetic Operators:
   + for adding and concatinationg
-  - for sub and if i do (10 - 'any string'  will give NaN   typeof nan is number also)
+  - for sub and if i do (10 - 'any string'  will give NaN typeof nan is number also)
   * multiply 
   / divide 
   ** exponintial
@@ -125,7 +125,7 @@ and more of them to know more search [ Character Escape Sequences ]
   all numbers in javascript called Double Precision
 
   console.log(1000000)  // 1000000 
-  console.log(1_000_000)  // 1000000   _ called syntactic sugar its ignored and used to make numbers readable
+  console.log(1_000_000)  // 1000000   (_) called syntactic sugar its ignored and used to make numbers readable
   console.log(1e6)  // 1000000 
   console.log(10 ** 6)  // 1000000 
   console.log(1000000.00)  // 1000000 
@@ -211,7 +211,7 @@ and more of them to know more search [ Character Escape Sequences ]
   let x = 'Hello people this is war'
 
   - indexOf(value [mand] , start [Opt] default is 0)  //  x.indexOf('this') =>  13  (if no result it will give -1)
-  - lastIndexOf(value [mand] , start [Opt] default is length) // x.indexOf('o') =>  8 find the index of first o from the last 
+  - lastIndexOf(value [mand] , end [Opt] default is length) // x.indexOf('o') =>  8 find the index of first o from the last 
   - slice(start [mand] , end [opt] not included )
       x.slice(2,10)  => 'llo peop'
       x.slice(-7,-3) => ' is '   //slice in negative deal with length not index and from the end
@@ -233,5 +233,88 @@ and more of them to know more search [ Character Escape Sequences ]
   - includes(value [mand], start [opt] default 0)
   - startWith(value [mand], start [opt] default 0)
   - endWith(value [mand], length [opt] default full length)
+</pre>
+---
+### LV-36
+---
+<pre>
+  Logical Or ||
+    if the value is one of the following :
+    Null / undefined / any false value (0 ,"",false)
+    it will take the next side.
+
+      console.log(Null || 'Hello')  // 'Hello'
+      console.log(0 || 'Hello')  // 'Hello'
+  
+  Nullish coalescing Operator ??
+    if the value is only (Null / undefined)
+    it will take the next side
+
+      onsole.log(Null ?? 'Hello')  // 'Hello'
+      console.log(0 ?? 'Hello')  // 0
+</pre>
+---
+### LV-38
+---
+<pre>
+  Switch
+  
+  - switch condition is type sensitive 
+    switch ('10') is not like switch(10)
+    that means it will take the case with the same type and value 
+
+  - break word usage 
+    if i dont use break after each case it will take all the casses for the same value
+
+    switch('hello') {
+
+      case 'hello': 
+      console.log('meow');
+      break ;
+
+      case 'hello' :
+      console.log('meow');
+      break ;
+    }
+
+    the output here is 'meow' one time
+
+    switch('hello') {
+
+      case 'hello' :
+      console.log('meow');
+
+      case 'hello' :
+      console.log('meow');
+      break ;
+    }
+
+    the output here is 'meow' two time
+
+  - we can use defalut case any where but if i dont use it in the end we must add break also to avoid more one output
+</pre>
+---
+### LV-40
+---
+<pre>
+  if we do typeof any array the result is object
+
+  we can use Array.isArray() to check the arrays by true and false answer
+  let x = [1,2,3]
+  Array.isArray(x)  // true
+</pre>
+---
+### LV-41/42/43
+---
+<pre>
+  Arrays Methods :
+
+  - unshift(value1 , value2 ..etc)  
+  - push(value1 , value2 ..etc)
+  - shift()
+  - pop()
+  - includes()
+  - indexOf(value[mand], start index [opt] default is 0)
+  - lastIndexOf(value[mand], length by index [opt] default is last index)
 </pre>
 ---

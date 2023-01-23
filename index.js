@@ -3,11 +3,37 @@
 
 // this variable comes from html because (hello) is an id for an element 
 
-console.log(hello);
-hello.style.color = 'red';
-hello.innerText = 'i change the text for the element from this line';
+// console.log(hello);
+// hello.style.color = 'red';
+// hello.innerText = 'i change the text for the element from this line';
 
 
 
 //------------------------------------------------------------------------------
 
+console.log(Number.MAX_SAFE_INTEGER.toString().length)
+
+//------------------------------------------------------------------------------
+
+let myVar = "100.56789 Views";
+
+console.log(parseInt(myVar)); // 100
+console.log(parseFloat(parseFloat(myVar).toFixed(2))); // 100.57
+
+//------------------------------------------------------------------------------
+
+let num = 10;
+
+console.log(Number.isInteger(num) + Number.isInteger(num)); // 2
+
+
+//------------------------------------------------------------------------------
+
+
+let arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+// let x = arr.indexOf(1,arr.length)
+console.log(arr.indexOf('d', 3))
+console.log(arr.lastIndexOf('d', -4))
+
+console.log(arr.slice(arr.length-4, -2))
