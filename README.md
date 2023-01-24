@@ -304,17 +304,32 @@ and more of them to know more search [ Character Escape Sequences ]
   Array.isArray(x)  // true
 </pre>
 ---
-### LV-41/42/43
+### LV-41/42/43/44/45/46
 ---
 <pre>
   Arrays Methods :
 
-  - unshift(value1 , value2 ..etc)  
-  - push(value1 , value2 ..etc)
-  - shift()
-  - pop()
+  - unshift(value1 , value2 ..etc)                                           (change the original array)    
+  - push(value1 , value2 ..etc)                                              (change the original array)    
+  - shift()                                                                  (change the original array)    
+  - pop()                                                                    (change the original array)   
   - includes()
   - indexOf(value[mand], start index [opt] default is 0)
   - lastIndexOf(value[mand], length by index [opt] default is last index)
+  - sort(compareFunction [opt])  // sort the data from 0 - 1 - a - z         (change the original array) 
+  - reverse()  // to reverse the array                                       (change the original array) 
+  - splice(start[0],deleteCount , element added)                             (change the original array)
+  - concat(added array or elements )  
+  - join()     //change the array to a string
 </pre>
+![methods](./assets/arraysMethods.png)
+---
+### LV-Notes:
+---
+<pre>
+  Loops controlling :
+  break : to stop the loop and go out
+  contenuie : to skip the loop iteration based on a condition  
+</pre>
+
 ---

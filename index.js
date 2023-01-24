@@ -31,9 +31,19 @@ console.log(Number.isInteger(num) + Number.isInteger(num)); // 2
 
 
 let arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+let str = 'abcdef';
 
 // let x = arr.indexOf(1,arr.length)
-console.log(arr.indexOf('d', 3))
-console.log(arr.lastIndexOf('d', -4))
+// console.log(arr.indexOf('d', 3))
+// console.log(arr.lastIndexOf('d', 1))
 
-console.log(arr.slice(arr.length-4, -2))
+// console.log(arr.slice(arr.length-4, arr.length-2));
+// console.log(arr.includes('c'));
+// console.log(str.includes('def'));
+
+
+
+
+if(''==='string') {
+  console.log('sex')
+}

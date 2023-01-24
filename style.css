@@ -1,0 +1,19 @@
+#hello {
+  width: 20vw;
+  height: 20vh;
+  background-color: red;
+  color: blue;
+  border-radius: 50px;
+  overflow: hidden;
+
+}
+
+#hello1 {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20vw;
+  height: 20vh;
+  background-color: black;
+}
