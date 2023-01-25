@@ -44,6 +44,3 @@ let str = 'abcdef';
 
 
 
-if(''==='string') {
-  console.log('sex')
-}

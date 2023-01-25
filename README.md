@@ -331,5 +331,44 @@ and more of them to know more search [ Character Escape Sequences ]
   break : to stop the loop and go out
   contenuie : to skip the loop iteration based on a condition  
 </pre>
+---
+### LV-61:
+---
+<pre>
+  Functions :
 
+  parameter VS aurgument
+
+  function test(anyValue) {        // anyValue is function parameter
+    console.log(anyValue);
+  } 
+  
+  test('Ali')  // ali is function aurgument
+
+
+  - if i dont set an aurgument to parameter it will be undifined
+    or we can set this vale when we declare the parameter.
+    function(num1,num2=0)
+  
+  - we can use Rest parameter if we dont know the number of parameters we need 
+    function(...test)
+
+    - test is an array depends on the aurgs we will use 
+    - we cant use more one rest parameter 
+    - if we need to declare normal parameters the rest must be the last one 
+      function(num1,num2,...nums)
+</pre>
+---
+### LV-64:
+---
+<pre>
+  Functions :
+
+  - Anyonimus functions are fucntions without names 
+    that we use for events for examble and no need to name them
+
+  - If we store the function inside a variable we can access the function using
+    the variable name but it will lose the hoisting feature so we cant access it 
+    before the variable decleration , because it will use run time (when reach define)
+</pre>
 ---
