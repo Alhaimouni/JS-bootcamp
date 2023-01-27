@@ -44,3 +44,4 @@ let str = 'abcdef';
 
 
 
+document.

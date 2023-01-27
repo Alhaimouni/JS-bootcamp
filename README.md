@@ -372,3 +372,88 @@ and more of them to know more search [ Character Escape Sequences ]
     before the variable decleration , because it will use run time (when reach define)
 </pre>
 ---
+### LV-86:
+---
+<pre>
+  DOM :
+    - when the html file loaded the browsed creates model (an object) for this html file caled document.
+</pre>
+---
+### LV-92:
+---
+<pre>
+  Events :
+    - We can use events in html file or in linked js file 
+    - onclick
+    - oncontextmenu (right click)
+    - onmouseenter
+    - onmouseleave
+  
+    - onload
+    - onscroll
+    - onresize
+  
+    - onfocus  (click on feild)
+    - onblur   (leave the feild)
+    - onsubmit 
+</pre>
+---
+### LV-94:
+---
+<pre>
+  Events simulator:
+  - i can make an event happens when other event happens
+
+  document.getElementById('btn').onclick = () = > {
+    document.getElementById('btn-two').click();
+  }
+
+  if i click on btn element btn-two will cliked automatically 
+
+    window.onload = () = > {
+    document.getElementById('input').focus();
+  }
+
+  if the page loaded the input will be under focus event
+</pre>
+---
+### LV-95:
+---
+<pre>
+  classList methods:
+  - length
+  - contains
+  - item (by index)
+  - add
+  - remove
+  - toggle
+</pre>
+---
+### LV-96:
+---
+<pre>
+  DOM Style :
+  - i can do inline style or edit the stylesheet file using dom
+  
+    - to do inline style we can use the property style.
+
+        let element = document.getElementById('test');
+
+        element.style.color = 'red';
+        element.style.backgroundColor = 'black'
+
+        or type css text direct like :
+
+        element.cssText = 'color:red; background-color: black;'   // as css 100% 
+
+        to remove or add properties we can use 'setPropery' or 'removePropery'
+
+        element.setPropery('font-size','40px, 'important')       // as css 100%  
+        element.removePropery('font-size')    
+
+    - to edit css file style we can use the property stylesheets.   //it will give an array with all sheets we use 
+
+        document.stylesheets[0].rules[0].style.addProperty('background-color','red')
+    
+</pre>
+---
