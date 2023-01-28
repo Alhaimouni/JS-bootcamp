@@ -457,3 +457,203 @@ and more of them to know more search [ Character Escape Sequences ]
     
 </pre>
 ---
+### LV-97:
+---
+<pre>
+  DOM inserted element place :
+
+  let x = document.getElementsByTagName('div')[0]
+  let y = document.createElement('p')
+
+    x.before(y)  // add the element y before the element x
+    x.after(y)  // add the element y after the element x
+
+    x.append(y)   // add the element inside y but as last element
+    x.prepend(y)  // add the element inside y but as first element
+
+    x.remove()   // to remove the element x from the dom tree
+</pre>
+---
+### LV-98:
+---
+<pre>
+  DOM Traverse :
+
+  - nextSibling()  // get the first thing (any even if its a comment) after the element on the same level
+  - previeosSibling()  // get the first thing (any even if its a comment) before the element on the same level
+
+  - nextElementSibling()  // get the first element after the element on the same level
+  - previeousElementSibling()  // get the first element before the element on the same level
+
+  - parentElement()    // to select the element parent
+
+</pre>
+---
+### LV-99:
+---
+<pre>
+  DOM Cloning :
+
+  if i said 
+
+  let x = document.getElementById('test');
+  let y = document.getElementById('test-div');
+
+  y.appendChild(x);   // in this way i changed the place of the element to be inside 'test-div'
+
+  if i want to copy the element to be in more than one place we can do the following
+
+    let x = document.getElementById('test').cloneNode();      //this is a cloned element now from the original
+    let y = document.getElementById('test-div');
+
+      y.appendChild(x);   // in this way i copy the element to be inside 'test-div'
+
+      .cloneNode(true / false =default)
+        -true to copy the element with attributes and the inner content
+        -false (default) to copy the element with attributes and ignore what inside the element
+</pre>
+---
+### LV-102:
+---
+<pre>
+  BOM :
+    -stands for browser object model (window)
+    - every thing is inside window object (document , console  ,variables and functions)
+
+    What can i do with window object ?
+    - open window
+    - close window
+    - move window
+    - resize window
+    - print window
+    - run code after period of time once or more
+    - fully controle the url
+    - save data inside the browser (localStorage)
+</pre>
+---
+### LV-103:
+---
+<pre>
+  BOM :
+    -stands for browser object model (window)
+    - every thing is inside window object (document , console  ,variables and functions)
+
+    What can i do with window object ?
+    - open window
+    - close window
+    - move window
+    - resize window
+    - print window
+    - run code after period of time once or more
+    - fully controle the url
+    - save data inside the browser (localStorage)
+</pre>
+---
+### LV-104:
+---
+<pre>
+  SetTimeOut() :
+
+  - setTimeOut(callback,time ,callback aurgs1 ,args 2 ..etc)
+  - we can assign it to variable and it will retern the number of settimeout
+  - 
+  function test(name) {
+    console.log(`hello ${name});
+  }
+
+  let x = settimeout(test,1000,'ali')
+  or
+  let x = settimeout(()=>{test('ali')},1000)
+  let y = settimeout(()=>{test('mohammad')},1000)
+
+  console.log(x) // 1
+  console.log(y) // 2
+
+  we can cancle the time out function by using 
+  clearTimeOut(timeOutNumber)
+
+  clearTimeOut(x);  // to cancel the first time out
+</pre>
+---
+### LV-105:
+---
+<pre>
+  SetInterval() :
+
+  - SetInterval(callback,time ,callback aurgs1 ,args 2 ..etc)
+  - we can assign it to variable and it will retern the number of SetInterval
+  - 
+  function test(name) {
+    console.log(`hello ${name});
+  }
+
+  let x = SetInterval(test,1000,'ali')
+  or
+  let x = SetInterval(()=>{test('ali')},1000)
+  let y = SetInterval(()=>{test('mohammad')},1000)
+
+  console.log(x) // 1
+  console.log(y) // 2
+
+  we can cancle the time out function by using 
+  clearSetInterval(SetIntervalNumber)
+
+  clearSetInterval(x);  // to cancel the first time out
+</pre>
+---
+### LV-106:
+---
+<pre>
+  BOM :
+  Location object 
+    - href  // to get or set the url hash file and mail
+    - replace()   // replace the url of the page without saving it into history (can't go back)
+    - assign()    //  the url of the page with ability to saving it into history 
+    - reload()   // reload the page
+    - host       // get the host or edit it
+    - hash       // get the hash or edit it
+    - protocol   // get the protocol or edit it
+</pre>
+---
+### LV-107:
+---
+<pre>
+  BOM :
+  -open(url,target,featurs,historysave)  // to open new window
+    all are [opt]
+    - url : window url
+    - target : new page "_blank" or same page "_self"
+    - featurs : width , hieght , left ,top 
+    - historysave : true or false
+  
+  -close() // to close a window (works only with opened using js)
+
+  window.open('https://google.com','_blank',"width=200,height = 400 , left = 20" , true)
+</pre>
+---
+### LV-108:
+---
+<pre>
+  BOM :
+    History object :
+      property 
+      length // to get the number of saved urls inculdes the current page
+
+      methods :
+      -back()  // to back to previos url
+      -forward()  // to go to next page
+      -go()    // to go to any url by place  0 = current , 1 = forward , -1 = back , -2 = back+1 ..etc
+</pre>
+---
+
+### LV-108:
+---
+<pre>
+  BOM :
+
+  - stop()    // to stop loading
+  - focus()  // to select the open page of the browser
+  - scrollTo(x-axis,y-axis , options as behavior smooth)    //  static location
+  - scrollby(x-axis,y-axis , options as behavior smooth)   //  scroll based on last scroll place
+</pre>
+---

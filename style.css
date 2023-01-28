@@ -1,14 +1,13 @@
 #hello {
   width: 20vw;
   height: 20vh;
+  margin: 0 auto;
+  padding: 20px;
   background-color: red;
-  color: blue;
-  border-radius: 50px;
-  overflow: hidden;
-
+  text-align: center;
 }
 
-#hello1 {
+/* #hello1 {
   content: '';
   position: absolute;
   left: 0;
@@ -16,4 +15,9 @@
   width: 20vw;
   height: 20vh;
   background-color: black;
+} */
+
+
+:root {
+  --var-six: red;
 }
