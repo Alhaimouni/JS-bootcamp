@@ -59,14 +59,44 @@
 
 //------------------------------------------------------------------------------
 
-let x = setTimeout(one, 1000,'ali');
-let y = setTimeout(() => { console.log('meow2') }, 1000);
-let z = setTimeout(() => { console.log('meow3') }, 1000);
 
-console.log(x);
-console.log(y);
-console.log(z);
+// let x = setTimeout(one, 1000,'ali');
+// let y = setTimeout(() => { console.log('meow2') }, 1000);
+// let z = setTimeout(() => { console.log('meow3') }, 1000);
 
-function one(name) {
-  console.log(`helo ${name}`)
-}
+// console.log(x);
+// console.log(y);
+// console.log(z);
+
+// function one(name) {
+//   console.log(`helo ${name}`)
+// }
+
+
+//------------------------------------------------------------------------------
+
+let x = document.querySelector('html').style.setProperty('--var-six', 'green');
+let y = document.querySelector('html').style.setProperty('--var-five', 'sd');
+
+let k = document.styleSheets[0].cssRules[0].style.setProperty('--sex-mex', 'mex');
+
+console.log(k);
+
+document.querySelector('.test .screen').style.backgroundColor = localStorage.color;
+let buttons = document.querySelectorAll('.colors span');
+
+
+
+
+
+buttons.forEach(span => {
+  if (span.dataset.color == localStorage.color) {
+    span.className = 'active';
+  };
+  span.onclick = (e) => {
+    span.parentElement.childNodes.forEach(span => span.className = '')
+    span.className = 'active'
+    span.parentElement.nextElementSibling.style.backgroundColor = e.target.dataset.color;
+    window.localStorage.color = e.target.dataset.color
+  }
+})

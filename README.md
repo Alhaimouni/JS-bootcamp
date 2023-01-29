@@ -650,10 +650,66 @@ and more of them to know more search [ Character Escape Sequences ]
 ---
 <pre>
   BOM :
-
   - stop()    // to stop loading
   - focus()  // to select the open page of the browser
   - scrollTo(x-axis,y-axis , options as behavior smooth)    //  static location
   - scrollby(x-axis,y-axis , options as behavior smooth)   //  scroll based on last scroll place
+</pre>
+---
+### LV-113:
+---
+<pre>
+  sessionstorage is exaclty like the localstorage but if i close the tap ill lose the data
+  
+  - if i refresh the page the session will keep 
+  - if i want to open new tap with the session data i must use dublicate tap not new tap with the same url
+</pre>
+---
+### LV-115:
+---
+<pre>
+  Arrays Destruchuring :
+  let arrayTest = [1,2,3,4];
+
+  // create new variables with the value of array items
+
+    let [a,b,c,d] = arrayTest
+    console.log(a);     // 1
+    console.log(b);     // 2
+    console.log(c);     // 3
+    console.log(d);     // 4
+
+  // variables are exist with the value of array items
+
+    let a;
+    let b;
+    let c;
+    let d;
+
+    [a,b,c,d] = arrayTest;
+
+  // skip the third element
+
+    let [a,b,,d]= arrayTest;
+</pre>
+---
+### LV-117:
+---
+<pre>
+  swaping using destruchering 
+
+  let book = 'Video';
+  let video = 'Book';
+
+  // Old way :
+
+    let stash = book;
+
+    book = video;
+    video = stash;
+
+  // Neow way :
+    [book , video] = [video,book];
+
 </pre>
 ---

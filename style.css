@@ -1,10 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --var-six: red;
+}
+
+
 #hello {
-  width: 20vw;
+  width: 10vw;
   height: 20vh;
   margin: 0 auto;
   padding: 20px;
-  background-color: red;
+  background-color: rgb(84, 84, 84);
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* #hello1 {
@@ -18,6 +30,60 @@
 } */
 
 
-:root {
-  --var-six: red;
+.test {
+  width: 500px;
+  background-color: #eee;
+  height: 300px;
+  margin: 50px auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.test .colors {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  flex-basis: 25%;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.test .colors span {
+  flex-basis: 14%;
+  opacity: 0.5;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.test .screen {
+  background-color: bisque;
+  flex-basis: 75%;
+  transition: 0.5s;
+}
+
+.test .colors span:nth-child(1) {
+  background-color: red;
+}
+
+.test .colors span:nth-child(2) {
+  background-color: green;
+}
+
+.test .colors span:nth-child(3) {
+  background-color: black;
+}
+
+.test .colors span:nth-child(4) {
+  background-color: blue;
+}
+
+.test .colors span:nth-child(5) {
+  background-color: yellow;
+}
+
+
+.test .colors .active,
+.test .colors span:hover {
+  opacity: 1;
+  border: 3px double gray;
 }
