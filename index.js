@@ -1,4 +1,4 @@
-
+let { log } = console;
 
 
 // this variable comes from html because (hello) is an id for an element 
@@ -75,28 +75,70 @@
 
 //------------------------------------------------------------------------------
 
-let x = document.querySelector('html').style.setProperty('--var-six', 'green');
-let y = document.querySelector('html').style.setProperty('--var-five', 'sd');
 
-let k = document.styleSheets[0].cssRules[0].style.setProperty('--sex-mex', 'mex');
+// document.querySelector('.test .screen').style.backgroundColor = localStorage.color;
+// let buttons = document.querySelectorAll('.colors span');
 
-console.log(k);
+// buttons.forEach(span => {
+//   if (span.dataset.color == localStorage.color) {
+//     span.className = 'active';
+//   };
+//   span.onclick = (e) => {
+//     span.parentElement.childNodes.forEach(span => span.className = '')
+//     span.className = 'active'
+//     span.parentElement.nextElementSibling.style.backgroundColor = e.target.dataset.color;
+//     window.localStorage.color = e.target.dataset.color
+//   }
+// })
 
-document.querySelector('.test .screen').style.backgroundColor = localStorage.color;
-let buttons = document.querySelectorAll('.colors span');
+//------------------------------------------------------------------------------
+
+// let x = [1, 1, 1, 3, 5, 2];
+// log(x);
+
+// let y = new Set(x);
+// log(y);
 
 
+//==============================================================================
 
-
-
-buttons.forEach(span => {
-  if (span.dataset.color == localStorage.color) {
-    span.className = 'active';
-  };
-  span.onclick = (e) => {
-    span.parentElement.childNodes.forEach(span => span.className = '')
-    span.className = 'active'
-    span.parentElement.nextElementSibling.style.backgroundColor = e.target.dataset.color;
-    window.localStorage.color = e.target.dataset.color
+class Human {
+  static counter = 0;
+  constructor(a, b, c) {
+    this.name = a;
+    this.age = b;
+    this.country = c;
+    Human.counter++;
   }
-})
+  sayHello() {
+    return (`${this.name} says hello`)
+  }
+  static count() {
+    return Human.counter;
+  }
+}
+
+class Doctor extends Human {
+  #ks
+  constructor(a, b, c, d, e, k) {
+    super('ali');
+    this.special = a;
+    this.university = b;
+    this.#ks = k;
+  }
+  meow(){
+    console.log(this.#ks);
+  }
+}
+
+
+let h1 = new Human('ali', 26, 'jordan');
+let h2 = new Human('mhmd', 28, 'UAE');
+let d1 = new Doctor('Teeth', 'Jordainian', 'ttes','Teeth', 'Jordainian', 'secrey');
+
+
+console.log(d1.sayHello());
+console.log(d1.meow());
+console.log(h1.sayHello());
+console.log(h2.sayHello());
+console.log(Human.count());

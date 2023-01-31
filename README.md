@@ -713,3 +713,250 @@ and more of them to know more search [ Character Escape Sequences ]
 
 </pre>
 ---
+### LV-123:
+---
+<pre>
+Set datatype :
+    - Object to store unique values
+    - cannot access it by index 
+
+  let arr = [1,1,2,3,4];
+
+  let setTest = new Set(arr);
+
+  console.log(setTest)   // {1,2,3}
+  console.log(setTest.size)  // 3
+
+  setTest.add(1)      // will not add because its already exist
+  setTest.add(5)      // will add the value 5 to the set
+
+  set.delete(1)      // will delete the value 1 (delete is return true or false if deleted or not)
+  set.clear()        // will clear the set data
+  set.has(2)         // method will return true or false if the set has the value of 2 for example
+</pre>
+---
+### LV-124:
+---
+<pre>
+weakSet datatype :
+  - this dataType accepts objects only 
+
+  // back to video for more
+</pre>
+---
+### LV-126:
+---
+<pre>
+Map dataType :
+
+  - its like the object but with better performace 
+  - Proberties: 
+    size: the number of key-value pairs
+  -Methods:
+    -set()   // to set data set(key : value)
+    -get()   // to get data get(key)
+    -delete() // to delete data by key name .delete(key) return true or false if deleted or not
+    -has()   // to check on data by key .has(key) return true or false if deleted or not
+    -clear() // to clear the Map object
+
+  - Assign values to Map 
+  
+  - as a key we can store any type [array,object,function boolean , string and numbers]
+
+  let myMap = new Map([
+    [ keyOne:ValueOne ]
+    [ keyTwo:ValueTwo ]
+    [ keyThree:ValueThree ]
+  ]);
+
+  or
+  
+  let  myMap = new Map();
+  myMap.set(keyOne,ValueOne );
+  myMap.set(keyTwo,ValueTwo );
+  myMap.set(keyThree,ValueThree );
+
+</pre>
+---
+### LV-127:
+---
+<pre>
+weakMap dataType :
+// refer to the video for info
+</pre>
+---
+### LV-128:
+---
+<pre>
+  Array.from(iterable,function,this)
+
+  this method used to create an array from iterable thing
+
+  let x = '12345'
+
+  let y = Array.from(x);
+
+  console.log(y)   // [1,2,3,4,5]
+
+  let k = Array.from(x,(item)=> {+item + +item });
+    console.log(k)   // [2,4,6,8,10]
+</pre>
+---
+### LV-147:
+---
+<pre>
+  OOP :
+  It's a paradigm or Style of Code
+</pre>
+---
+### LV-148:
+---
+<pre>
+  constructor function:
+  - a function used to create objects 
+  - should start with capital letter to follow the rules
+  
+  function Test (name,age,salary) {
+    this.name = name;
+    this.age = age;
+    this.salary;
+  }
+
+  let userOne = new Test('ahmad',25,5000);
+  let userTwo = new Test('ali',30,10000);
+</pre>
+---
+### LV-149:
+---
+<pre>
+  ES6 constructor function:
+  
+  class Test {
+    constructor (name,age,salary) {
+      this.name = name;
+      this.age = age;
+      this.salary= salary;
+    } 
+  }
+
+  let userOne = new Test('ahmad',25,5000);
+  let userTwo = new Test('ali',30,10000);
+</pre>
+---
+### LV-150:
+---
+<pre>
+  class Test {
+    constructor (name,age,salary) {
+      this.name = name;
+      this.age = age;
+      this.salary= salary;
+      this.msg = function() {
+        console.log(`hello ${this.name}`);
+      }
+    }
+
+    sayHello(){
+      console.log(`hello ${this.name}`);
+    } 
+  }
+
+  msg is property contains a function inside the constructor
+  sayHello is method inside the class   (NOTE : declare without function word)
+
+  let userOne = new Test('ahmad',25,5000);
+   console.log(userOne.msg)           // will log the native fucntion (محتوةى الاقتران نفسه)
+    console.log(userOne.msg())        // will invoke the function and give the result
+
+    console.log(userOne.sayHello)           // will log the native fucntion (محتوةى الاقتران نفسه)
+    console.log(userOne.sayHello())        // will invoke the function and give the result
+</pre>
+---
+### LV-152:
+---
+<pre>
+  Static word :
+    If i want to create methods and properties for the Class not for the instances 
+    we use static word so the class will access this things not the instances
+    - variables must declare out of constructor block
+  
+  class Test {
+    counterOne = 0;
+    static counterTwo = 0;
+    constructor (name,age) {
+      this.name = name;
+      this.age = age;
+    }
+    sayHello(){
+      console.log(`hello ${this.name}`);
+    } 
+  }
+
+    let userOne = new Test('ahmad',25);
+
+    console.log(userOne.counterOne)  // 0
+    console.log(userOne.counterTwo)  // undefind
+
+    console.log(Test.counterOne)  // undefind
+    console.log(Test.counterOne)  // 0
+</pre>
+---
+### LV-153:
+---
+<pre>
+  Inherit :
+  - classes can inherit props and methods from another classes
+  - by using extends word and user super inside a constructor
+  
+    class Human {
+      constructor(name, age, country) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
+      }
+      sayHello() {
+        return (`${this.name} says hello`)
+      }
+    }
+
+    class Doctor extends Human {
+      constructor(a,b,c,d,e) {
+        super(c,d,e)
+        this.special = a;
+        this.university = b;
+      }
+    }
+
+    in this way any instance from Doctor class can use Human properties and method 
+
+    let doc = new Doctor('teeth','BAU','Ali',40,'Jordan');
+
+    doc.sayHello()        // Ali says hello
+</pre>
+---
+### LV-154:
+---
+<pre>
+  Encapsulation :
+  - used to make some properties to be not accessable by users
+  - all prorerties and methods can see it and deal with it 
+  
+  class Test {
+    // to create private properites we need to declare it out of constructor first
+    #saraly
+    constructor (name,age,salary){
+      this.name = name ;
+      this.age = age ;
+      this.#salary = salary
+    }
+
+    getSalary() {
+      return parseInt(this.#salary)*0.075
+    }
+  }
+
+  let user = new Test('ali',25,'1000 JD');
+  user.salary  // error we are trying to access private prop will lead to no result
+  user.getSalary()        // 75 the method dealt with it 
+</pre>
+---
